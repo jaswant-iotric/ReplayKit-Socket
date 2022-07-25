@@ -115,8 +115,10 @@
     while (recvLength < length) {
         ssize_t res = recv(self.acceptSock, data, length - recvLength, 0);
         if (res == -1 || res == 0) {
+            NSLog(@"Status received : %ld", res);
             UNLOCK(lock);
             NSLog(@"😁😁😁😁😁recv data error");
+            [self.delegate stoppedReceingBuffer];
             break;
         }
         recvLength += res;

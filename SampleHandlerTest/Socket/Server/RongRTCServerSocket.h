@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 解码数据回调
 /// @param sampleBuffer 解码数据
 - (void)didProcessSampleBuffer:(CMSampleBufferRef)sampleBuffer;
+- (void)stoppedReceingBuffer;
 
 @end
 NS_ASSUME_NONNULL_END
