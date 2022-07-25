@@ -27,6 +27,8 @@ class SampleHandler: RPBroadcastSampleHandler {
     }
     
     override func broadcastFinished() {
+        clientSocket?.close()
+        clientSocket = nil
         // User has requested to finish the broadcast.
     }
     
