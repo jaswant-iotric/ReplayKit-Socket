@@ -20,12 +20,13 @@ class ViewController: UIViewController {
     }
     
     private func setupReplayKitPicker() {
-        serverSocket?.createServerSocket()
+        
         broadcastPickerView = RPSystemBroadcastPickerView.init(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: 80))
         broadcastPickerView?.preferredExtension = "com.thirdeyegen.mrworkspace.SampleHandlerTest.SampleHandlerTestExtension"
         broadcastPickerView?.backgroundColor = UIColor(red: 53.0/255, green: 129.0/255, blue: 242.0/255, alpha: 1.0 )
         broadcastPickerView?.showsMicrophoneButton = false
         self.view.addSubview(broadcastPickerView!)
+        
     }
     
     private func setupServerSocket() {
@@ -33,14 +34,25 @@ class ViewController: UIViewController {
             let socket = RongRTCServerSocket()
             socket.delegate = self
             serverSocket = socket
+            serverSocket?.createServerSocket()
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        serverSocket?.close()
+        serverSocket = nil
+    }
 }
+
+
 
 extension ViewController: RongRTCServerSocketProtocol {
     
     func stoppedReceingBuffer() {
         print("Screen share ended")
+        self.serverSocket?.close()
+        self.serverSocket = nil
+        self.setupServerSocket()
     }
     
     func didProcessSampleBuffer(_ sampleBuffer: CMSampleBuffer) {

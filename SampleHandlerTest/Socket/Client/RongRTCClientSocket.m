@@ -97,6 +97,7 @@
 - (void)sendBytes:(char *)bytes length:(int )length {
     LOCK(self->lock);
     int hasSendLength = 0;
+    NSLog(@"------>Sending Frame");
     while (hasSendLength < length) {
         // connect socket success
         if (self.sock > 0) {
