@@ -39,6 +39,9 @@
 		4876777C288EA18300CA796D /* helpers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4876775E288E991B00CA796D /* helpers.mm */; };
 		4876777D288EA18300CA796D /* RongRTCVideoEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 48767761288E991B00CA796D /* RongRTCVideoEncoder.mm */; };
 		4876777E288EA18C00CA796D /* RongRTCVideoDecoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 48767766288E991B00CA796D /* RongRTCVideoDecoder.mm */; };
+		48B2FFEB28900BC800514F2E /* DarwinNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B2FFEA28900BC800514F2E /* DarwinNotificationCenter.swift */; };
+		48B2FFEC28900C1E00514F2E /* DarwinNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B2FFEA28900BC800514F2E /* DarwinNotificationCenter.swift */; };
+		48B2FFEE28902A9F00514F2E /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B2FFED28902A9F00514F2E /* LocalNotifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +124,8 @@
 		48767768288E991B00CA796D /* RongRTCVideoEncoderSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongRTCVideoEncoderSettings.h; sourceTree = "<group>"; };
 		48767769288E991B00CA796D /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
 		48767771288EA03300CA796D /* SampleHandlerTestExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleHandlerTestExtension-Bridging-Header.h"; sourceTree = "<group>"; };
+		48B2FFEA28900BC800514F2E /* DarwinNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarwinNotificationCenter.swift; sourceTree = "<group>"; };
+		48B2FFED28902A9F00514F2E /* LocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,9 +229,11 @@
 		4876773D288E845100CA796D /* SampleHandlerTestExtension */ = {
 			isa = PBXGroup;
 			children = (
+				48B2FFEA28900BC800514F2E /* DarwinNotificationCenter.swift */,
 				4876773E288E845100CA796D /* SampleHandler.swift */,
 				48767740288E845100CA796D /* Info.plist */,
 				48767771288EA03300CA796D /* SampleHandlerTestExtension-Bridging-Header.h */,
+				48B2FFED28902A9F00514F2E /* LocalNotifications.swift */,
 			);
 			path = SampleHandlerTestExtension;
 			sourceTree = "<group>";
@@ -465,6 +472,7 @@
 				4876775B288E987700CA796D /* RongRTCThread.m in Sources */,
 				4876776E288E991B00CA796D /* RongRTCVideoDecoder.mm in Sources */,
 				4876775A288E987700CA796D /* RongRTCSocket.m in Sources */,
+				48B2FFEC28900C1E00514F2E /* DarwinNotificationCenter.swift in Sources */,
 				4876776D288E991B00CA796D /* RongRTCVideoEncoderSettings.m in Sources */,
 				48767759288E987700CA796D /* RongRTCBufferUtil.m in Sources */,
 				4876776C288E991B00CA796D /* RongRTCVideoEncoder.mm in Sources */,
@@ -505,9 +513,11 @@
 				4876773F288E845100CA796D /* SampleHandler.swift in Sources */,
 				48767779288EA15E00CA796D /* RongRTCThread.m in Sources */,
 				48767778288EA15E00CA796D /* RongRTCServerSocket.m in Sources */,
+				48B2FFEE28902A9F00514F2E /* LocalNotifications.swift in Sources */,
 				48767776288EA15E00CA796D /* RongRTCClientSocket.m in Sources */,
 				4876777C288EA18300CA796D /* helpers.mm in Sources */,
 				4876777D288EA18300CA796D /* RongRTCVideoEncoder.mm in Sources */,
+				48B2FFEB28900BC800514F2E /* DarwinNotificationCenter.swift in Sources */,
 				4876777B288EA16300CA796D /* RongRTCVideoEncoderSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
